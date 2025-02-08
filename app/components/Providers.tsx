@@ -10,7 +10,7 @@ const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 export default function Providers({ children }: { children: React.ReactNode }) {
     const authenticator = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/auth/imagekit");
+            const response = await fetch("http://localhost:3000/api/auth/imagekit-auth");
 
             if (!response.ok) {
                 const errorText = await response.text();
